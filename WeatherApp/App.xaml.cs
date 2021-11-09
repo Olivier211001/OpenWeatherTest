@@ -11,7 +11,7 @@ namespace WeatherApp
     {
       public App()
         {
-            AppConfiguration.GetValue("");
+           AppConfiguration.GetValue("");
         }
     }
 }
