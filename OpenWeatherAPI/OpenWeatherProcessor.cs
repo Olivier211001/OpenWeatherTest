@@ -50,7 +50,12 @@ namespace OpenWeatherAPI
         /// <returns></returns>
         public async Task<OpenWeatherOneCallModel> GetOneCallAsync()
         {
-            
+
+            if (ApiKey == null || ApiKey == "")
+            {
+                throw new ArgumentException("ApiKey is null or Empty");
+            }
+
             EndPoint = $"/onecall?";
 
             /// Src : https://stackoverflow.com/a/14517976/503842
@@ -75,6 +80,9 @@ namespace OpenWeatherAPI
         /// <returns></returns>
         public async Task<OWCurrentWeaterModel> GetCurrentWeatherAsync()
         {
+
+  
+
             EndPoint = $"/weather?";
 
             /// Src : https://stackoverflow.com/a/14517976/503842
@@ -84,6 +92,7 @@ namespace OpenWeatherAPI
             query["q"] = "Shawinigan"; // Shawinigan
             query["units"] = "metric";
             query["appid"] = ApiKey;
+
 
             uriBuilder.Query = query.ToString();
             longUrl = uriBuilder.ToString();
