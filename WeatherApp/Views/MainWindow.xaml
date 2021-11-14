@@ -9,11 +9,17 @@
     <DockPanel>
         <Button DockPanel.Dock="Top" Content="Load content TODO" Command="{Binding GetDataCommand}"/>
         <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Date :"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Metre Per Sec :"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Direction:" ></TextBlock>
             <TextBlock Grid.Row="0" TextAlignment="Center" Text="{Binding CurrentData.DateTime}"/>
             <TextBlock Grid.Row="1" TextAlignment="Center" Text="{Binding CurrentData.MetrePerSec}"/>
             <TextBlock Grid.Row="2" TextAlignment="Center" Text="{Binding CurrentData.Direction}"/>
