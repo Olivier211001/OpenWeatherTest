@@ -9,7 +9,7 @@ namespace WeatherApp
     /// </summary>
     public partial class App : Application
     {
-      public App()
+        public App()
         {
            AppConfiguration.GetValue("");
         }

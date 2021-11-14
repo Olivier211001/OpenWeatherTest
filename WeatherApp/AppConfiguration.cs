@@ -9,7 +9,7 @@ namespace WeatherApp
 {
     static public class AppConfiguration
     {
-        private static  IConfiguration configuration;
+        private static IConfiguration configuration;
         public static string GetValue(string key)
         {
            if(configuration == null)
@@ -18,7 +18,7 @@ namespace WeatherApp
            }
             return configuration.GetValue<string>(key);
         }
-        private static  void initConfig()
+        private static void initConfig()
         {
             configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").AddUserSecrets("f4f5746e-d24c-4697-b6cd-935a16b16033").Build();
         }
