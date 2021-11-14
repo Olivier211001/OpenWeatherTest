@@ -14,9 +14,9 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="{Binding CurrentData.DateTime}"/>
-            <TextBlock Grid.Row="1" Text="{Binding CurrentData.MetrePerSec}"/>
-            <TextBlock Grid.Row="2" Text="{Binding CurrentData.Direction}"/>
+            <TextBlock Grid.Row="0" TextAlignment="Center" Text="{Binding CurrentData.DateTime}"/>
+            <TextBlock Grid.Row="1" TextAlignment="Center" Text="{Binding CurrentData.MetrePerSec}"/>
+            <TextBlock Grid.Row="2" TextAlignment="Center" Text="{Binding CurrentData.Direction}"/>
         </Grid>
     </DockPanel>
 </Window>
